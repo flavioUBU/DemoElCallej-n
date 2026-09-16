@@ -1,0 +1,241 @@
+:root {
+    --primary: #1A1A1A;
+    --accent: #D4AF37; /* Tono dorado elegante para barbería */
+    --bg-light: #F4F4F2;
+    --white: #FFFFFF;
+    --text-muted: #7A7A7A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .brand {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header / Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(5px);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    z-index: 1000;
+}
+
+.brand-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--white);
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.demo-tag {
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Botones generales */
+.btn {
+    background-color: var(--accent);
+    color: var(--primary);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #c19d30;
+    transform: translateY(-2px);
+}
+
+.btn-nav {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1rem;
+    margin-top: 65px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    color: #E0E0E0;
+}
+
+/* Secciones Generales */
+section {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+/* Servicios */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.service-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--accent);
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+}
+
+.service-price {
+    color: var(--accent);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+}
+
+.service-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Contacto Barbería */
+.contact-section {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.contact-section h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    color: #B0B0B0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    color: var(--white);
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: var(--white);
+}
+
+.whatsapp-btn:hover {
+    background-color: #20ba5a;
+}
+
+/* Footer */
+footer {
+    background-color: #111111;
+    color: #666666;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    .demo-tag { font-size: 0.55rem; }
+}
